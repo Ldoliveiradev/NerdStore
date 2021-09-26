@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E3A982C9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.Catalogo.Domain.Tests", "tests\NerdStore.Catalogo.Domain.Tests\NerdStore.Catalogo.Domain.Tests.csproj", "{82535CED-CFF7-4A55-B06F-DB41CC48BD43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.Catalogo.Data", "src\NerdStore.Catalogo.Data\NerdStore.Catalogo.Data.csproj", "{9E3271E3-DF46-46ED-BDFF-F294DA525E33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,18 @@ Global
 		{82535CED-CFF7-4A55-B06F-DB41CC48BD43}.Release|x64.Build.0 = Release|Any CPU
 		{82535CED-CFF7-4A55-B06F-DB41CC48BD43}.Release|x86.ActiveCfg = Release|Any CPU
 		{82535CED-CFF7-4A55-B06F-DB41CC48BD43}.Release|x86.Build.0 = Release|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Debug|x64.Build.0 = Debug|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Debug|x86.Build.0 = Debug|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Release|x64.ActiveCfg = Release|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Release|x64.Build.0 = Release|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Release|x86.ActiveCfg = Release|Any CPU
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +102,7 @@ Global
 		{359DCF31-0569-4BC7-860D-4479E4C2D84E} = {27C1F1D5-ECB4-4513-983C-3FCDD6876EF5}
 		{E3A982C9-8BAC-419B-839A-55D8B803E653} = {7456D7A7-1470-4F4F-86B3-2AC6303E79DD}
 		{82535CED-CFF7-4A55-B06F-DB41CC48BD43} = {E3A982C9-8BAC-419B-839A-55D8B803E653}
+		{9E3271E3-DF46-46ED-BDFF-F294DA525E33} = {7456D7A7-1470-4F4F-86B3-2AC6303E79DD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA7A2B83-293E-404F-918E-7B7E45B3CA8C}
