@@ -11,6 +11,8 @@ namespace NerdStore.Vendas.Domain
         public int Quantidade { get; private set; }
         public decimal ValorUnitario { get; private set; }
 
+        public Pedido Pedido { get; set; }
+
         protected PedidoItem()
         {
 
@@ -23,8 +25,6 @@ namespace NerdStore.Vendas.Domain
             Quantidade = quantidade;
             ValorUnitario = valorUnitario;
         }
-
-        public Pedido Pedido { get; set; }
 
         internal void AssociarPedido(Guid pedidoId)
         {
