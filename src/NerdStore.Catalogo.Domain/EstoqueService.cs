@@ -8,9 +8,9 @@ namespace NerdStore.Catalogo.Domain
     public class EstoqueService : IEstoqueService
     {
         private readonly IProdutoRepository _produtoRepository;
-        private readonly IMediatrHandler _bus;
+        private readonly IMediatorHandler _bus;
 
-        public EstoqueService(IProdutoRepository produtoRepository, IMediatrHandler bus)
+        public EstoqueService(IProdutoRepository produtoRepository, IMediatorHandler bus)
         {
             _produtoRepository = produtoRepository;
             _bus = bus;
@@ -28,7 +28,7 @@ namespace NerdStore.Catalogo.Domain
 
             if (produto.QuantidadeEstoque < 10)
             {
-                await _bus.PublicarEvento(new ProdutoAbaixoEstoqueEvent(produto.Id, produto.QuantidadeEstoque));
+                await _bus.PublicarEventos(new ProdutoAbaixoEstoqueEvent(produto.Id, produto.QuantidadeEstoque));
             }
 
             _produtoRepository.Atualizar(produto);

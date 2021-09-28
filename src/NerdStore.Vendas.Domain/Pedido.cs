@@ -83,7 +83,7 @@ namespace NerdStore.Vendas.Domain
 
         public void AdicionarItem(PedidoItem item)
         {
-            if (item.Validar()) return;
+            if (!item.Validar()) return;
 
             item.AssociarPedido(Id);
 
