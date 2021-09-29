@@ -56,38 +56,38 @@ namespace NerdStore.WebApp.MVC.Controllers
             return RedirectToAction("ProdutoDetalhe", "Vitrine", new { id });
         }
 
-        //[HttpPost]
-        //[Route("remover-item")]
-        //public async Task<IActionResult> RemoverItem(Guid id)
-        //{
-        //    var produto = await _produtoAppService.ObterPorId(id);
+        [HttpPost]
+        [Route("remover-item")]
+        public async Task<IActionResult> RemoverItem(Guid id)
+        {
+            var produto = await _produtoAppService.ObterPorId(id);
 
-        //    if (produto == null) return BadRequest();
+            if (produto == null) return BadRequest();
 
-        //    var command = new RemoverItemPedidoCommand(ClienteId, id);
-        //    await _mediatorHandler.EnviarComando(command);
+            var command = new RemoverItemPedidoCommand(ClienteId, id);
+            await _mediatorHandler.EnviarComando(command);
 
-        //    if (OperacaoValida())
-        //    {
-        //        return RedirectToAction("Index");
-        //    }
+            if (OperacaoValida())
+            {
+                return RedirectToAction("Index");
+            }
 
-        //    return View("Index", await _pedidoQueries.ObterCarrinhoCliente(ClienteId));
-        //}
+            return View("Index", await _pedidoQueries.ObterCarrinhoCliente(ClienteId));
+        }
 
-        //[HttpPost]
-        //[Route("aplicar-voucher")]
-        //public async Task<IActionResult> AplicarVoucher(string voucherCodigo)
-        //{
-        //    var command = new AplicarVoucherCommand(ClienteId, voucherCodigo);
-        //    await _mediatorHandler.EnviarComando(command);
+        [HttpPost]
+        [Route("aplicar-voucher")]
+        public async Task<IActionResult> AplicarVoucher(string voucherCodigo)
+        {
+            var command = new AplicarVoucherPedidoCommand(ClienteId, voucherCodigo);
+            await _mediatorHandler.EnviarComando(command);
 
-        //    if (OperacaoValida())
-        //    {
-        //        return RedirectToAction("Index");
-        //    }
+            if (OperacaoValida())
+            {
+                return RedirectToAction("Index");
+            }
 
-        //    return View("Index", await _pedidoQueries.ObterCarrinhoCliente(ClienteId));
-        //}
+            return View("Index", await _pedidoQueries.ObterCarrinhoCliente(ClienteId));
+        }
     }
 }
