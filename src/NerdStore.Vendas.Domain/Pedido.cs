@@ -139,7 +139,7 @@ namespace NerdStore.Vendas.Domain
 
         public void AtualizarUnidades(PedidoItem item, int unidades)
         {
-            item.AdicionarUnidades(unidades);
+            item.AtualizarUnidades(unidades);
             AtualizarItem(item);
         }
 
