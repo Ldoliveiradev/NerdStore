@@ -51,7 +51,7 @@ namespace NerdStore.Catalogo.Domain
 
             if (produto.QuantidadeEstoque < 10)
             {
-                await _mediatorHandler.PublicarEvento(new ProdutoAbaixoEstoqueEvent(produto.Id, produto.QuantidadeEstoque));
+                await _mediatorHandler.PublicarDomainEvent(new ProdutoAbaixoEstoqueEvent(produto.Id, produto.QuantidadeEstoque));
             }
 
             _produtoRepository.Atualizar(produto);
